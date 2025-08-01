@@ -1,0 +1,55 @@
+body {
+  background-color: #121212; /* 类似 dark mode */
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+#wallpaper-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 1rem 2rem;
+}
+
+#wallpaper-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#wallpaper-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 8px;
+}
+
+.pagination button {
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button.active {
+  background-color: #4caf50;
+}
+
+.pagination button:hover {
+  background-color: #333;
+}
