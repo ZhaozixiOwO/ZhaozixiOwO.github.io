@@ -1,55 +1,116 @@
 body {
-  background-color: #121212; /* 类似 dark mode */
+  background-color: #1e1e1e;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
 }
 
-header {
+h1 {
+  color: #ffffff;
   text-align: center;
-  padding: 2rem;
+  margin-bottom: 30px;
 }
 
 #wallpaper-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  padding: 1rem 2rem;
-}
-
-#wallpaper-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-#wallpaper-gallery img:hover {
-  transform: scale(1.05);
-}
-
-.pagination {
   display: flex;
-  justify-content: center;
-  padding: 1rem;
-  gap: 8px;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
-.pagination button {
-  background-color: #1e1e1e;
+.page-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.image-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.image-entry img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.resolution-text {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#pagination button {
+  background-color: #333;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
+  margin: 0 5px;
+  padding: 10px 15px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+#pagination button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+#pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#pagination .active {
+  background-color: #666;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1% 0;
+  padding: 1%;
+  width: 95%;
+  max-width: 1200px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container img {
+  width: 75%;
+  height: auto;
+  margin-right: 5%;
+  border-radius: 8px;
+}
+
+.image-info {
+  color: white;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+}
+
+.image-title {
+  font-size: clamp(1.2rem, 2vw, 2rem); /* 在 1.2rem 和 2rem 之间根据屏幕自动缩放 */
   font-weight: bold;
-}
-
-.pagination button.active {
-  background-color: #4caf50;
-}
-
-.pagination button:hover {
-  background-color: #333;
+  margin-bottom: 6px;
 }
