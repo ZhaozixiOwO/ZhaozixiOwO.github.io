@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GBC Wallpapers</title>
-  <link rel="stylesheet" href="/assets/styles/4kgbc-wallpapers.css" />
+  <link rel="stylesheet" href="/assets/styles/4kgbc-wallpapers.css"/>
+  <style>
+    /* ✅ 按钮样式 */
+    .back-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 8px 16px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 1000; /* 确保在最上层 */
+    }
+
+    .back-btn:hover {
+      background-color: #666;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 class="page-title">Girls Band Cry Featured Wallpapers</h1>
-  </header>
+<!-- ✅ 固定左上角按钮 -->
+<button id="back-btn" class="back-btn">← Back to Home</button>
 
-  <main id="wallpaper-gallery"></main>
+<header>
+  <h1 class="page-title">Girls Band Cry Featured Wallpapers</h1>
+</header>
 
-  <div class="pagination" id="pagination"></div>
+<main id="wallpaper-gallery"></main>
 
-  <button onclick="window.location.href='/'">← Back to Home</button>
-  
-  <script src="/assets/scripts/4kgbc-wallpapers.js"></script>
+<div class="pagination" id="pagination"></div>
+
+<script src="/assets/scripts/4kgbc-wallpapers.js"></script>
+
+<script>
+  document.getElementById("back-btn").addEventListener("click", () => {
+    window.location.href = "../index.html";  // ✅ 回到上一级目录的 index.html
+  });
+</script>
 </body>
 </html>
