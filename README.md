@@ -1,7 +1,7 @@
 # Zixi Zhao's Personal Website
 
 This repository hosts my personal homepage, deployed via GitHub Pages:  
-👉 https://zhaozixiowo.github.io/
+👉 <a href="https://zhaozixiowo.github.io/" target="_blank" rel="noopener noreferrer">https://zhaozixiowo.github.io/</a>
 
 ## ⚙️ Function
 
